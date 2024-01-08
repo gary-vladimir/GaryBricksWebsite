@@ -189,4 +189,17 @@ nav #contact:hover {
         font-size: 1.2em;
         width: 80vw;
     }
+
+    nav {
+        left: 0px;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 0;
+    }
+
+    #heroNavtext {
+        display: none;
+    }
 }
