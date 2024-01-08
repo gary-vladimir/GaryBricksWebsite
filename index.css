@@ -42,9 +42,54 @@ body {
 
 nav {
     position: absolute;
-    top: 100px;
-    left: 50px;
+    top: 8vh;
+    left: 10vw;
     z-index: 2;
+    display: flex;
+    gap: 5em;
+    font-weight: 300;
+}
+
+a {
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    color: #93A9F5;
+}
+
+a:hover {
+    color: white;
+}
+
+nav #contact {
+    border-radius: 8px;
+    background: linear-gradient(90deg, #4269F3 0%, #A67CFF 100%);
+    padding: 5px 15px 5px 15px;
+    color: #e7ecffc9;
+}
+
+nav #contact:hover {
+    scale: 1.1;
+    color: white;
+}
+
+#knowMoreContainer {
+    transition: all 0.2s ease-in-out;
+    margin-top: 3em;
+    width: fit-content;
+    z-index: 2;
+    display: flex;
+    border-radius: 52px;
+    background: linear-gradient(90deg, #4269F3 0%, #A67CFF 100%);
+    color: #E7ECFF;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 25px 8px 25px;
+    gap: 1em;
+}
+
+#knowMoreContainer:hover {
+    cursor: pointer;
+    transform: translateY(-0.5em);
 }
 
 .gif {
@@ -89,7 +134,7 @@ nav {
 }
 
 #container #description {
-    width: 50vw;
+    width: 20em;
     color: #93A9F5;
     font-family: Montserrat;
     font-size: 2.5em;
@@ -129,10 +174,19 @@ nav {
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     #header {
         font-size: 3em;
         text-align: center;
+    }
+
+    #hero #container #description {
+        text-align: center;
+        font-size: 1.2em;
+        width: 80vw;
     }
 }
