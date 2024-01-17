@@ -3,7 +3,7 @@ const socialMediaLinks = {
     "in": "https://www.linkedin.com/in/gary-vladimir/",
     "gitHub": "https://github.com/gary-vladimir",
     "yt": "https://www.youtube.com/@GaryBricks3D",
-    "Hashnode": "https://blog.garybricks.com/"
+    "hashnode": "https://blog.garybricks.com/"
 };
 
 const keys = Object.keys(socialMediaLinks).slice(0, 5);
