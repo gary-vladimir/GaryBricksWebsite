@@ -182,6 +182,13 @@ nav #contact:hover {
     width: calc(100% - 3em);
 }
 
+@media screen and (min-width: 1600px) {
+    #aboutMeText {
+        font-size: 1.4em;
+    }
+}
+
+
 #aboutSocialMedia {
     margin-top: 4em;
     display: flex;
