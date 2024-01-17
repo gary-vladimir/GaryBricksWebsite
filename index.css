@@ -157,6 +157,85 @@ nav #contact:hover {
     height: 100vh;
 }
 
+#About #content {
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: calc(50% - 40px) 80px calc(50% - 40px);
+    grid-template-rows: 100vh;
+}
+
+
+#About h1 {
+    color: #0C1855;
+    font-size: 6em;
+    font-weight: 700;
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+}
+
+#aboutMeText {
+    color: rgba(8, 13, 50, 0.75);
+    text-align: justify;
+    font-size: 1.1em;
+    font-weight: 500;
+    width: calc(100% - 3em);
+}
+
+#aboutSocialMedia {
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+}
+
+#SeeAllMeritsBTN {
+    position: relative;
+    color: white;
+    width: fit-content;
+    padding: 10px 20px 10px 20px;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #4269F3 0%, #A67CFF 100%);
+    display: inline-block;
+}
+
+#SeeAllMeritsBTN:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#aboutLine {
+    width: 2px;
+    height: calc(100% - 21em);
+    background-color: rgba(8, 13, 50, 0.25);
+    margin-left: 50px;
+}
+
+#aboutSocialMedia img {
+    max-width: 50px;
+    transition: all ease-in-out 100ms;
+}
+
+#aboutSocialMedia img:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+#About #content #img {
+    position: relative;
+    justify-self: center;
+    align-self: center;
+    width: 50%;
+}
+
+#About img {
+    width: 100%;
+}
+
+#About #img .decoration {
+    position: absolute;
+    z-index: -10;
+}
+
 #Work {
     min-height: 100vh;
 }
