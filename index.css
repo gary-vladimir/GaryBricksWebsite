@@ -186,6 +186,22 @@ nav #contact:hover {
     #aboutMeText {
         font-size: 1.4em;
     }
+
+    nav a {
+        font-size: 1.4em;
+    }
+
+    #hero #knowMoreContainer {
+        font-size: 1.4em;
+    }
+
+    #About #content h1 {
+        font-size: 8em;
+    }
+
+    #hero #header p {
+        font-size: 1.4em;
+    }
 }
 
 
