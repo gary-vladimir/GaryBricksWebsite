@@ -55,14 +55,18 @@ nav {
     font-weight: 300;
 }
 
-a {
+nav a {
     transition: all 0.2s ease-in-out;
     text-decoration: none;
     color: #93A9F5;
 }
 
-a:hover {
+nav a:hover {
     color: white;
+}
+
+a {
+    text-decoration: none;
 }
 
 nav #contact {
@@ -244,6 +248,14 @@ nav #contact:hover {
 }
 
 @media screen and (min-width: 1600px) {
+    #tools img {
+        width: 50px;
+    }
+
+    #tools {
+        grid-template-rows: 50px 50px;
+    }
+
     #aboutMeText {
         font-size: 1.4em;
     }
@@ -261,6 +273,10 @@ nav #contact:hover {
     }
 
     #hero #header p {
+        font-size: 1.4em;
+    }
+
+    #workText {
         font-size: 1.4em;
     }
 }
@@ -327,6 +343,7 @@ nav #contact:hover {
 
 section {
     position: relative;
+    min-height: 100vh;
 }
 
 #circuitSVGcontainer {
@@ -339,6 +356,164 @@ section {
     position: relative;
     height: 80vh;
     z-index: 20;
+}
+
+#ContactSection {
+    display: grid;
+    grid-template-rows: repeat(2, 50vh);
+    grid-template-columns: 100vw;
+    overflow: hidden;
+}
+
+#ContactCutter {
+    position: relative;
+    overflow: hidden;
+}
+
+#contactContent {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 3em;
+}
+
+#contactDescription {
+    color: rgba(8, 13, 50, 0.75);
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+#contactCard {
+    position: relative;
+    border-radius: 15px;
+    background: #FFF;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+}
+
+#blueCard {
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px 0px 0px 15px;
+    background: linear-gradient(180deg, #0C1855 0%, #4258C9 100%);
+    color: white;
+    padding: 2em 2em 2em 2em;
+    width: min-content;
+    font-size: 0.8em;
+}
+
+#blueCard h2 {
+    margin-right: 4em;
+    text-wrap: nowrap;
+}
+
+.iconcontact {
+    width: 35px;
+    height: 35px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.flexcenter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#ContactLine {
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 2em;
+}
+
+#blueCard a {
+    color: white;
+}
+
+#blueCardDecoration {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    right: -20%;
+    bottom: -10%;
+    background-image: linear-gradient(90deg, rgba(160, 181, 255, 0.70) 0%, rgba(66, 105, 243, 0.00) 100%);
+}
+
+#contactCard img {
+    margin-right: 1em;
+}
+
+.socialMediaTitle {
+    font-size: 1em;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0.4em;
+    text-wrap: nowrap;
+}
+
+.socialMediaInfo {
+    font-size: 0.6em;
+    font-weight: 500;
+    text-wrap: nowrap;
+}
+
+.socialMediaCard {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: all ease-in-out 150ms;
+}
+
+.socialMediaCard:hover {
+    scale: 1.1;
+}
+
+.socialMediaLine {
+    margin-top: 0.5em;
+    height: 1px;
+    width: 100%;
+    background-color: black;
+}
+
+.socialMediaDescription {
+    padding: 1em;
+    font-size: small;
+}
+
+#contactContent h1 {
+    color: #0C1855;
+    font-size: 6em;
+    font-weight: 700;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#cardsContainerContact {
+    position: relative;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(2, 250px);
+    grid-template-rows: auto auto 70px;
+    padding: 1em;
+}
+
+#cardsContainerContact a img {
+    width: 60px;
+    height: 60px;
+}
+
+.contactDecoration {
+    position: absolute;
+    opacity: 0.5;
 }
 
 @media only screen and (max-width: 768px) {
