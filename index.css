@@ -501,9 +501,9 @@ section {
     position: relative;
     display: grid;
     gap: 1em;
-    grid-template-columns: repeat(2, 250px);
-    grid-template-rows: auto auto 70px;
-    padding: 1em;
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: auto auto 80px;
+    padding: 1.5em;
 }
 
 #cardsContainerContact a img {
