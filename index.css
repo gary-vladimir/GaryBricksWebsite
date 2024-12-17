@@ -297,6 +297,7 @@ nav #contact:hover {
   border-radius: 25px;
   background: linear-gradient(90deg, #4269f3 0%, #a67cff 100%);
   display: inline-block;
+  transition: all ease-in-out 100ms;
 }
 
 #SeeAllMeritsBTN:hover {
