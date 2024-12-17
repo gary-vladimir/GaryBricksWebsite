@@ -1,604 +1,605 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
-@import url('animations.css');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
+@import url("animations.css");
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
 }
 
-
 #hero {
-    height: 100vh;
-    background: linear-gradient(108deg, #1C2089 0%, #0C1855 50.52%, #26409B 100%);
-    overflow: hidden;
-    position: relative;
+  height: 100vh;
+  background: linear-gradient(108deg, #1c2089 0%, #0c1855 50.52%, #26409b 100%);
+  overflow: hidden;
+  position: relative;
 }
 
 @keyframes moveDiv {
-    0% {
-        transform: translate(0%, -50%);
-    }
+  0% {
+    transform: translate(0%, -50%);
+  }
 
-    100% {
-        transform: translate(-50%, 0%);
-    }
+  100% {
+    transform: translate(-50%, 0%);
+  }
 }
 
 .starRainBackground {
-    position: relative;
-    animation: moveDiv 20s infinite linear;
+  position: relative;
+  animation: moveDiv 20s infinite linear;
 }
 
 .starRainBackground.desktop {
-    width: 200%;
+  width: 200%;
 }
 
 .starRainBackground.mobile {
-    display: none;
-    height: 200vh;
-    width: 200vw;
+  display: none;
+  height: 200vh;
+  width: 200vw;
 }
 
 nav {
-    position: absolute;
-    top: 8vh;
-    left: 10vw;
-    z-index: 2;
-    display: flex;
-    gap: 5em;
-    font-weight: 300;
+  position: absolute;
+  top: 8vh;
+  left: 10vw;
+  z-index: 2;
+  display: flex;
+  gap: 5em;
+  font-weight: 300;
 }
 
 nav a {
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-    color: #93A9F5;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  color: #93a9f5;
 }
 
 nav a:hover {
-    color: white;
+  color: white;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 nav #contact {
-    border-radius: 8px;
-    background: linear-gradient(90deg, #4269F3 0%, #A67CFF 100%);
-    padding: 5px 15px 5px 15px;
-    color: #e7ecffc9;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #4269f3 0%, #a67cff 100%);
+  padding: 5px 15px 5px 15px;
+  color: #e7ecffc9;
 }
 
 nav #contact:hover {
-    scale: 1.1;
-    color: white;
+  scale: 1.1;
+  color: white;
 }
 
 #knowMoreContainer {
-    transition: all 0.2s ease-in-out;
-    margin-top: 3em;
-    width: fit-content;
-    z-index: 2;
-    display: flex;
-    border-radius: 52px;
-    background: linear-gradient(90deg, #4269F3 0%, #A67CFF 100%);
-    color: #E7ECFF;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 25px 8px 25px;
-    gap: 1em;
+  transition: all 0.2s ease-in-out;
+  margin-top: 3em;
+  width: fit-content;
+  z-index: 2;
+  display: flex;
+  border-radius: 52px;
+  background: linear-gradient(90deg, #4269f3 0%, #a67cff 100%);
+  color: #e7ecff;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 25px 8px 25px;
+  gap: 1em;
 }
 
 #knowMoreContainer:hover {
-    cursor: pointer;
-    transform: translateY(-0.5em);
+  cursor: pointer;
+  transform: translateY(-0.3em);
+  scale: 1.05;
+  font-weight: 500;
 }
 
 .gif {
-    transform-origin: center center;
-    max-width: 70vw;
-    height: auto;
-    max-height: 100vh;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    transform: scale(1.2);
+  transform-origin: center center;
+  max-width: 70vw;
+  height: auto;
+  max-height: 100vh;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  transform: scale(1.2);
 }
 
 .darkScreen {
-    display: none;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 #hero #container {
-    position: absolute;
-    z-index: 3;
-    top: 18vh;
-    left: 10vw;
+  position: absolute;
+  z-index: 3;
+  top: 18vh;
+  left: 10vw;
 }
 
 #header p {
-    margin: 8px;
+  margin: 8px;
 }
 
 #header {
-    color: white;
-    font-size: 5em;
-    font-weight: bold;
-    margin-bottom: 0.3em;
-
+  color: white;
+  font-size: 5em;
+  font-weight: bold;
+  margin-bottom: 0.3em;
 }
 
 #container #description {
-    width: 20em;
-    color: #93A9F5;
-    font-family: Montserrat;
-    font-size: 2.5em;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
+  width: 20em;
+  color: #93a9f5;
+  font-family: Montserrat;
+  font-size: 2em;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
 }
 
 #container #description #green {
-    color: #7CD8FF;
-    font-weight: 400;
+  color: #7cd8ff;
+  font-weight: 500;
 }
 
 #About {
-    height: 100vh;
+  height: 100vh;
 }
 
 #About #content {
-    position: relative;
-    z-index: 10;
-    display: grid;
-    grid-template-columns: calc(50% - 40px) 80px calc(50% - 40px);
-    grid-template-rows: 100vh;
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: calc(50% - 40px) 80px calc(50% - 40px);
+  grid-template-rows: 100vh;
 }
 
-
 #About h1 {
-    color: #0C1855;
-    font-size: 6em;
-    font-weight: 700;
-    margin-top: 0.6em;
-    margin-bottom: 0.2em;
+  color: #0c1855;
+  font-size: 6em;
+  font-weight: 700;
+  margin-top: 0.6em;
+  margin-bottom: 0.2em;
 }
 
 #workText,
 #aboutMeText {
-    color: rgba(8, 13, 50, 0.75);
-    text-align: justify;
-    font-size: 1.1em;
-    font-weight: 500;
+  color: rgba(8, 13, 50, 0.75);
+  text-align: justify;
+  font-size: 1.1em;
+  font-weight: 500;
 }
 
 #aboutMeText {
-    width: calc(100% - 3em);
+  width: calc(100% - 3em);
 }
 
 #workText {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 #tools {
-    position: relative;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 35px 35px;
-    gap: 1em;
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 35px 35px;
+  gap: 1em;
 }
 
 #tools div {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 #tools img {
-    width: 35px;
-    border-radius: 8px;
+  width: 35px;
+  border-radius: 8px;
 }
 
 .project {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    background-position: center;
-    background-size: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background-position: center;
+  background-size: cover;
 }
 
 .project:hover {
-    scale: 1.05;
+  scale: 1.05;
 }
 
 #work h1 {
-    color: #0C1855;
-    font-size: 6em;
-    font-weight: 700;
-    margin-top: 0px;
-    margin-bottom: 0.2em;
+  color: #0c1855;
+  font-size: 6em;
+  font-weight: 700;
+  margin-top: 0px;
+  margin-bottom: 0.2em;
 }
 
 #circuitSVGcontainer {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: repeat(2, 1fr);
-    gap: 2em;
-    padding-left: 8vw;
-    padding-right: 8vw;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2em;
+  padding-left: 8vw;
+  padding-right: 8vw;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  height: 80vh;
 }
 
 @media screen and (min-width: 1600px) {
-    #tools img {
-        width: 50px;
-    }
+  #tools img {
+    width: 50px;
+  }
 
-    #tools {
-        grid-template-rows: 50px 50px;
-    }
+  #tools {
+    grid-template-rows: 50px 50px;
+  }
 
-    #aboutMeText {
-        font-size: 1.4em;
-    }
+  #aboutMeText {
+    font-size: 1.4em;
+  }
 
-    nav a {
-        font-size: 1.4em;
-    }
+  nav a {
+    font-size: 1.4em;
+  }
 
-    #hero #knowMoreContainer {
-        font-size: 1.4em;
-    }
+  #hero #knowMoreContainer {
+    font-size: 1.4em;
+  }
 
-    #About #content h1 {
-        font-size: 8em;
-    }
+  #About #content h1 {
+    font-size: 8em;
+  }
 
-    #hero #header p {
-        font-size: 1.4em;
-    }
+  #hero #header p {
+    font-size: 1.4em;
+  }
 
-    #workText {
-        font-size: 1.4em;
-    }
+  #workText {
+    font-size: 1.4em;
+  }
 }
 
-
 #aboutSocialMedia {
-    margin-top: 4em;
-    display: flex;
-    flex-direction: column;
+  margin-top: 4em;
+  display: flex;
+  flex-direction: column;
 }
 
 #SeeAllMeritsBTN {
-    position: relative;
-    color: white;
-    width: fit-content;
-    padding: 10px 20px 10px 20px;
-    border-radius: 25px;
-    background: linear-gradient(90deg, #4269F3 0%, #A67CFF 100%);
-    display: inline-block;
+  position: relative;
+  color: white;
+  width: fit-content;
+  padding: 10px 20px 10px 20px;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #4269f3 0%, #a67cff 100%);
+  display: inline-block;
 }
 
 #SeeAllMeritsBTN:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 #aboutLine {
-    width: 2px;
-    height: calc(100% - 21em);
-    background-color: rgba(8, 13, 50, 0.25);
-    margin-left: 50px;
+  width: 2px;
+  height: calc(100% - 21em);
+  background-color: rgba(8, 13, 50, 0.25);
+  margin-left: 50px;
 }
 
 #aboutSocialMedia a {
-    width: 50px;
-    height: 50px;
-    transition: all ease-in-out 100ms;
+  width: 50px;
+  height: 50px;
+  transition: all ease-in-out 100ms;
 }
 
 #aboutSocialMedia a:hover {
-    scale: 1.1;
-    cursor: pointer;
+  scale: 1.1;
+  cursor: pointer;
 }
 
 #About #content #img {
-    position: relative;
-    justify-self: center;
-    align-self: center;
-    width: 50%;
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  width: 50%;
 }
 
 #About img {
-    width: 100%;
+  width: 100%;
 }
 
 #About #img .decoration {
-    position: absolute;
-    z-index: -10;
+  position: absolute;
+  z-index: -10;
 }
 
 #Work {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 section {
-    position: relative;
-    min-height: 100vh;
+  position: relative;
+  min-height: 100vh;
 }
 
 #circuitSVGcontainer {
-    background-image: url("/images/circuitBackground.svg");
-    background-position: center;
-    background-size: cover;
+  background-image: url("/images/circuitBackground.svg");
+  background-position: center;
+  background-size: cover;
 }
 
 #pageInProgress {
-    position: relative;
-    height: 80vh;
-    z-index: 20;
+  position: relative;
+  height: 80vh;
+  z-index: 20;
 }
 
 #ContactSection {
-    display: grid;
-    grid-template-rows: repeat(2, 50vh);
-    grid-template-columns: 100vw;
-    overflow: hidden;
+  display: grid;
+  grid-template-rows: repeat(2, 50vh);
+  grid-template-columns: 100vw;
+  overflow: hidden;
 }
 
 #ContactCutter {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 #contactContent {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    top: 3em;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 3em;
 }
 
 #contactDescription {
-    color: rgba(8, 13, 50, 0.75);
-    text-align: center;
-    font-size: 1.1em;
-    font-weight: 500;
+  color: rgba(8, 13, 50, 0.75);
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 500;
 }
 
 #contactCard {
-    position: relative;
-    border-radius: 15px;
-    background: #FFF;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
-    display: flex;
+  position: relative;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
 }
 
 #blueCard {
-    overflow: hidden;
-    position: relative;
-    border-radius: 15px 0px 0px 15px;
-    background: linear-gradient(180deg, #0C1855 0%, #4258C9 100%);
-    color: white;
-    padding: 2em 2em 2em 2em;
-    width: min-content;
-    font-size: 0.8em;
+  overflow: hidden;
+  position: relative;
+  border-radius: 15px 0px 0px 15px;
+  background: linear-gradient(180deg, #0c1855 0%, #4258c9 100%);
+  color: white;
+  padding: 2em 2em 2em 2em;
+  width: min-content;
+  font-size: 0.8em;
 }
 
 #blueCard h2 {
-    margin-right: 4em;
-    text-wrap: nowrap;
+  margin-right: 4em;
+  text-wrap: nowrap;
 }
 
 .iconcontact {
-    width: 35px;
-    height: 35px;
-    background-position: center;
-    background-size: cover;
-    border-radius: 100%;
-    margin-right: 10px;
+  width: 35px;
+  height: 35px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 100%;
+  margin-right: 10px;
 }
 
 .flexcenter {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 #ContactLine {
-    height: 1px;
-    width: 100%;
-    background-color: white;
-    margin-bottom: 2em;
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  margin-bottom: 2em;
 }
 
 #blueCard a {
-    color: white;
+  color: white;
 }
 
 #blueCardDecoration {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    border-radius: 200px;
-    right: -20%;
-    bottom: -10%;
-    background-image: linear-gradient(90deg, rgba(160, 181, 255, 0.70) 0%, rgba(66, 105, 243, 0.00) 100%);
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  right: -20%;
+  bottom: -10%;
+  background-image: linear-gradient(
+    90deg,
+    rgba(160, 181, 255, 0.7) 0%,
+    rgba(66, 105, 243, 0) 100%
+  );
 }
 
 #contactCard img {
-    margin-right: 1em;
+  margin-right: 1em;
 }
 
 .socialMediaTitle {
-    font-size: 1em;
-    font-weight: 500;
-    margin-top: 1em;
-    margin-bottom: 0.4em;
-    text-wrap: nowrap;
+  font-size: 1em;
+  font-weight: 500;
+  margin-top: 1em;
+  margin-bottom: 0.4em;
+  text-wrap: nowrap;
 }
 
 .socialMediaInfo {
-    font-size: 0.6em;
-    font-weight: 500;
-    text-wrap: nowrap;
+  font-size: 0.6em;
+  font-weight: 500;
+  text-wrap: nowrap;
 }
 
 .socialMediaCard {
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    transition: all ease-in-out 150ms;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  transition: all ease-in-out 150ms;
 }
 
 .socialMediaCard:hover {
-    scale: 1.1;
+  scale: 1.1;
 }
 
 .socialMediaLine {
-    margin-top: 0.5em;
-    height: 1px;
-    width: 100%;
-    background-color: black;
+  margin-top: 0.5em;
+  height: 1px;
+  width: 100%;
+  background-color: black;
 }
 
 .socialMediaDescription {
-    padding: 1em;
-    font-size: small;
+  padding: 1em;
+  font-size: small;
 }
 
 #contactContent h1 {
-    color: #0C1855;
-    font-size: 6em;
-    font-weight: 700;
-    margin-bottom: 0px;
-    margin-top: 0px;
+  color: #0c1855;
+  font-size: 6em;
+  font-weight: 700;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 #cardsContainerContact {
-    position: relative;
-    display: grid;
-    gap: 1em;
-    grid-template-columns: repeat(2, 300px);
-    grid-template-rows: auto auto 80px;
-    padding: 1.5em;
+  position: relative;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(2, 300px);
+  grid-template-rows: auto auto 80px;
+  padding: 1.5em;
 }
 
 #cardsContainerContact a img {
-    width: 60px;
-    height: 60px;
+  width: 60px;
+  height: 60px;
 }
 
 .contactDecoration {
-    position: absolute;
-    opacity: 0.5;
+  position: absolute;
+  opacity: 0.5;
 }
 
 @media only screen and (max-width: 768px) {
-    .starRainBackground.desktop {
-        display: none;
-    }
+  .starRainBackground.desktop {
+    display: none;
+  }
 
-    .starRainBackground.mobile {
-        display: initial;
-    }
+  .starRainBackground.mobile {
+    display: initial;
+  }
 
-    .gif {
-        max-width: 100vw;
-        width: 100vw;
-        right: 50%;
-        top: 50%;
-        transform: translate(50%, -50%) scale(2);
-    }
+  .gif {
+    max-width: 100vw;
+    width: 100vw;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%) scale(2);
+  }
 
-    .darkScreen {
-        display: initial;
-    }
+  .darkScreen {
+    display: initial;
+  }
 
-    #hero #container {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  #hero #container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    #header {
-        font-size: 3em;
-        text-align: center;
-    }
+  #header {
+    font-size: 3em;
+    text-align: center;
+  }
 
-    #hero #container #description {
-        text-align: center;
-        font-size: 1.2em;
-        width: 80vw;
-    }
+  #hero #container #description {
+    text-align: center;
+    font-size: 1.2em;
+    width: 80vw;
+  }
 
-    nav {
-        left: 0px;
-        width: 100vw;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        gap: 0;
-    }
+  nav {
+    left: 0px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0;
+  }
 
-    #heroNavtext {
-        display: none;
-    }
+  #heroNavtext {
+    display: none;
+  }
 }
 
 #About {
-    overflow: hidden;
-    position: relative;
+  overflow: hidden;
+  position: relative;
 }
 
-
 .webkit-appearance-none {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 ::-webkit-scrollbar {
-    width: 14px;
-    background-color: #080D32;
+  width: 14px;
+  background-color: #080d32;
 }
 
 /* 4px scroll thumb. 10px margin from right margin */
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 14px 14px transparent;
-    border: solid 4px transparent;
+  box-shadow: inset 0 0 14px 14px transparent;
+  border: solid 4px transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    box-shadow: inset 0 0 14px 14px #E7ECFF;
-    border: solid 4px transparent;
-    border-radius: 14px;
+  box-shadow: inset 0 0 14px 14px #e7ecff;
+  border: solid 4px transparent;
+  border-radius: 14px;
 }
 
 ::-webkit-scrollbar-button {
-    display: none;
+  display: none;
 }
