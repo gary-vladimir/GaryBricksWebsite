@@ -90,11 +90,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll("section");
   let currentSectionIndex = 0;
 
+  // Smooth snapping logic
   scrollbar.addListener(() => {
     let closestSection = 0;
     let minDistance = Infinity;
 
-    // Find the section closest to the viewport center
     sections.forEach((section, index) => {
       const rect = section.getBoundingClientRect();
       const distance = Math.abs(rect.top - window.innerHeight * 0.1);
@@ -108,9 +108,32 @@ document.addEventListener("DOMContentLoaded", () => {
     if (closestSection !== currentSectionIndex) {
       currentSectionIndex = closestSection;
       const target = sections[currentSectionIndex];
-
-      // Smoothly scroll to the section
-      scrollbar.scrollTo(0, target.offsetTop, 1600); // ms duration
+      scrollbar.scrollTo(0, target.offsetTop, 1600); // Smooth scroll duration
     }
+  });
+
+  // Smooth navigation for navbar links
+  let navLinks = Array.from(document.querySelectorAll("nav a"));
+  const knowMoreContainer = document.getElementById("knowMoreContainer"); // knowMoreContainer is a link <a>
+
+  // Add knowMoreContainer to the navLinks array
+  navLinks.push(knowMoreContainer);
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      if (link.id === "blogLink") {
+        window.open(link.href, "_blank");
+        return;
+      }
+      event.preventDefault(); // Prevent default anchor behavior
+
+      const targetId = link.getAttribute("href").substring(1); // Get the target ID
+      const targetSection = document.getElementById(targetId);
+
+      if (targetSection) {
+        // Scroll smoothly to the target section
+        scrollbar.scrollTo(0, targetSection.offsetTop, 1600); // Adjust duration as needed
+      }
+    });
   });
 });
