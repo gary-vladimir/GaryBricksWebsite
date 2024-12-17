@@ -83,7 +83,34 @@ for (let i = 9; i < 18; i++) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const scrollbar = Scrollbar.init(document.body, {
-    damping: 0.08, // Adjust for smoothness
+    damping: 0.08,
     renderByPixel: true,
+  });
+
+  const sections = document.querySelectorAll("section");
+  let currentSectionIndex = 0;
+
+  scrollbar.addListener(() => {
+    let closestSection = 0;
+    let minDistance = Infinity;
+
+    // Find the section closest to the viewport center
+    sections.forEach((section, index) => {
+      const rect = section.getBoundingClientRect();
+      const distance = Math.abs(rect.top - window.innerHeight * 0.1);
+
+      if (distance < minDistance) {
+        minDistance = distance;
+        closestSection = index;
+      }
+    });
+
+    if (closestSection !== currentSectionIndex) {
+      currentSectionIndex = closestSection;
+      const target = sections[currentSectionIndex];
+
+      // Smoothly scroll to the section
+      scrollbar.scrollTo(0, target.offsetTop, 800); // 800ms duration
+    }
   });
 });
