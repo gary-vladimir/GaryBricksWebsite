@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const target = sections[currentSectionIndex];
 
       // Smoothly scroll to the section
-      scrollbar.scrollTo(0, target.offsetTop, 800); // 800ms duration
+      scrollbar.scrollTo(0, target.offsetTop, 1600); // ms duration
     }
   });
 });
