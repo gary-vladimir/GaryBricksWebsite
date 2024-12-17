@@ -274,6 +274,9 @@ nav #contact:hover {
   #hero #header p {
     font-size: 1.4em;
   }
+  #hero #container #description {
+    font-size: 2.4em;
+  }
 
   #workText {
     font-size: 1.4em;
