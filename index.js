@@ -33,6 +33,17 @@ const myTools = [
   "typeScript",
   "babel",
   "blender",
+  "affinity",
+  "python",
+  "docker",
+  "postgres",
+  "rviz",
+  "ros",
+  "gazebo",
+  "wokwi",
+  "arduino",
+  "davinci",
+  "raspberrypi",
 ];
 
 const keys = Object.keys(socialMediaLinks).slice(0, 5);
@@ -67,19 +78,51 @@ for (let i = 0; i < 4; i++) {
   work.appendChild(div);
 }
 
-for (let i = 0; i < 9; i++) {
-  const toolContainer = document.getElementById("row1");
-  const imgElement = document.createElement("img");
-  imgElement.src = `/images/workImages/tools/${myTools[i]}.jpg`;
-  toolContainer.appendChild(imgElement);
+function shuffleAndDisplayTools() {
+  const row1 = document.getElementById("row1");
+  const row2 = document.getElementById("row2");
+
+  // Fade out existing images
+  const allImages = document.querySelectorAll("#row1 img, #row2 img");
+  allImages.forEach((img) => img.classList.remove("visible"));
+
+  // Wait for the fade-out transition to complete before clearing and adding new images
+  setTimeout(() => {
+    row1.innerHTML = "";
+    row2.innerHTML = "";
+
+    shuffleArray(myTools);
+
+    // Add shuffled images with a fade-in effect
+    for (let i = 0; i < 9; i++) {
+      const imgElement = document.createElement("img");
+      imgElement.src = `/images/workImages/tools/${myTools[i]}.jpg`;
+      imgElement.classList.add("fade-in");
+      row1.appendChild(imgElement);
+    }
+
+    for (let i = 9; i < 18; i++) {
+      const imgElement = document.createElement("img");
+      imgElement.src = `/images/workImages/tools/${myTools[i]}.jpg`;
+      imgElement.classList.add("fade-in");
+      row2.appendChild(imgElement);
+    }
+
+    // Trigger the fade-in effect
+    setTimeout(() => {
+      document.querySelectorAll(".fade-in").forEach((img) => {
+        img.classList.add("visible");
+      });
+    }, 50); // Delay to ensure images are added to the DOM
+  }, 500);
 }
 
-for (let i = 9; i < 18; i++) {
-  const toolContainer = document.getElementById("row2");
-  const imgElement = document.createElement("img");
-  imgElement.src = `/images/workImages/tools/${myTools[i]}.jpg`;
-  toolContainer.appendChild(imgElement);
+function startShufflingTools() {
+  shuffleAndDisplayTools();
+  setInterval(shuffleAndDisplayTools, 3000);
 }
+
+startShufflingTools();
 
 document.addEventListener("DOMContentLoaded", () => {
   const scrollbar = Scrollbar.init(document.body, {
